@@ -8,16 +8,16 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: rgba(208, 204, 208, 1);
+    background-color: #262626;;
 }
 nav{
     position:fixed;
     left:0;
     top:0;
     width: 100%;
-    background-color: #222222;
+    background-color: #090A0C;
     padding: 20px;
-    box-shadow: 0 10px 10px -5px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 10px -5px rgba(9,10,12,0.03);
 }
 nav .navbar_container{
     height: 100%;
@@ -28,6 +28,7 @@ nav .navbar_container{
     align-items: center;
 }
 nav .navbar_logo{
+
     margin: 0;
     padding:5px 0;
     width: 20%;
@@ -36,32 +37,94 @@ nav .navbar_logo{
     top:0;
     left:0; 
 }
-nav .navbar_links{
+ .navbar_links{
     display:flex;
     align-items: center;
+    text-align: center;
 }
-nav .navbar_links li {
+ .navbar_links li {
     list-style: none;
     display: flex;
     margin: 0 8px ;
 }
-nav .navbar_links a{
-    color:#D0CCD0;
+ .navbar_links a{
+    color:white;
     opacity: 0.7;
     font-size: 1.2rem;
     text-decoration:none;
     padding: 10px 15px;
 }
-nav .navbar_links a:hover{
-    color: #EAC435;
+ .navbar_links a:hover{
+    color: #60712F;
     opacity: 1;
     text-decoration: underline;
     transition: all 0.3s;
 }
+
+@media(max-width:992px){
+    body,html{overflow-x: hidden;}
+    body{position: relative;width: 100%; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+    nav{position: relative;}
+    .navbar_dropmenu_links{ 
+        position: relative;
+        background-color: #090A0C ;
+        align-items: center;
+        text-align: center;}
+    .navbar_dropmenu_links li {
+        list-style: none;
+        margin: 0 8px ;
+    }
+    .navbar_dropmenu_links a:hover{
+        color: #60712F;
+        opacity: 1;
+        text-decoration: underline;
+        transition: all 0.3s;
+    }
+    .navbar_dropmenu_links a{
+        color:#FAFFFD;
+        opacity: 0.7;
+        font-size: 1.4rem;
+        text-decoration:none;
+        padding: 10px 15px;
+    }
+    .navbar_logo{display: none;}
+    .navbar_logo_min_width{position: relative;
+        align-items: center;
+        text-align: center;
+        font-size: 3rem; }
+    .navbar_links_container,.navbarbutton {display: none;}
+    #intro-section{
+       margin: -5px;
+    }
+    #welcome-section{
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 90%;
+        flex-direction: column;
+        margin-top: 3%;
+    }
+    #welcome-section > .message{
+        font-size: 1rem;
+    }
+    #welcome-section > div{
+        width: 80%;
+        height: fit-content;
+        
+        
+    }
+   
+    
+}
+@media(min-width:993px){
+    .navbar_container_min_width{display:none} 
+    .navbar_logo_min_width{display:none} 
+}
+
+
 #home{
     height: 100vh;
     width: 100%;
-    background-color: aqua;
+    background-color: #262626;;
     background: url();
     background-size: cover;
     background-repeat: no-repeat;
@@ -71,19 +134,19 @@ nav .navbar_links a:hover{
     width: 125px;
     height: 62px;
     cursor: pointer;
-    color: #1f2232;;
+    color: white;
     font-size: 17px;
     border-radius: 1rem;
     border: none;
     position: relative;
-    background-color: #EAC435;
+    background-color: #60712F;
     transition: 0.1s;
 }
 .cvbtn::after{
     content:'';
     width: 100%;
     height: 100%;
-    background-image: radial-gradient(circle farthest-corner at 10% 20%,rgba(94,130,255,1) 17.8%,rgba(234,196,53,1)100.2% );
+    background-image: radial-gradient(circle farthest-corner at 10% 20%,rgba(218,116,34,1) 17.8%,rgba(218,116,34,1)100.2% );
     filter: blur(10px);
     z-index: -1;
     position:absolute;
@@ -91,69 +154,92 @@ nav .navbar_links a:hover{
     top:0;
 }
 .cvbtn:hover{
-    background: radial-gradient(circle farthest-corner at 10% 20%,rgba(166,130,255,1) 17.8%,rgba(166,130,255,1) 17.8%,rgba(234,196,53,1)100.2%);
+    background: radial-gradient(circle farthest-corner at 10% 20%,rgba(218,116,34,1) 17.8%,rgba(218,116,34,1) 17.8%,rgba(218,116,34,1)100.2%);
     transition: 0.5s;
 }
 .cvbtn:active{
     transform: scale(0.3) rotate(3deg);
-    background: radial-gradient(circle farthest-corner at 10% 20%,rgba(166,130,255,1) 17.8%,rgba(234,196,53,1)100.2%);
+    background: radial-gradient(circle farthest-corner at 10% 20%,rgba(218,116,34,1) 17.8%,rgba(218,116,34,1)100.2%);
     transition: 0.5s;
 }
-#intro-section{
+#intro-sctn{
+    box-shadow: 1px solid black;
+    width: 100%;
     height: 250px;
     background-image:url("mb.jpg");
     background-size: cover;
-    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 10px 10px rgba(9,10,12,0.03);
 }
 #welcome-section{
     display: flex ;
-    margin:10px;
+    margin: 5px;
     justify-content: center;
+    background-color: #262626;;
 }
 .message{
     display: flex;
     margin: 50px;
     width: 35%;
+    text-align: center;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.5rem;
+
 }
 .message img {
     border-radius: 20%;
 }
+#about-section{margin: 50px;
+    justify-content: center;
+    height: 250px;
+    box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
+}
+.about-container{
+    margin:5% 5% 5% 2%;
+    
+    
+}
 section{
-    margin-top: 1rem;
-    padding-top:2rem;
+    background-color: #CFCFEA;;
+    padding: 20px;
+    margin: 0px;
 }
 .section-heading{
+    box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
     font-size: 2rem;
     text-align: center;
+    background-color: #60712F;
+    color: #090A0C;
 }
 div.my-infromation{
     display:block;
     font-size: 1.5rem;
     text-align: left;
-    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 10px 10px rgba(9,10,12,0.3);
 }
 #skills-section{
-    background-color: #EAC435;
+    padding: 20px;
+    margin: 50px;
+    justify-content: center;
+    background-color: #CFCFEA;;
     color:black;
-    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
+    box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
+  
 }
 .skills-container{
     display:flex;
     flex-wrap: wrap;
-    width: 70%;
+    width: 80%;
     justify-content: space-between;
-    margin: auto;
+    margin: 10px auto auto auto;
     grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
-    padding-bottom: 15px;
+    
+    background-color: #CFCFEA;
 }
 .skill-information{
     text-align:center;
     padding-top: 2%;
-    width: 120px;
+    width: 118px;
     height: 100px;
     box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
     margin: 3px;
@@ -165,12 +251,67 @@ div.my-infromation{
     margin: 0;
     font-size:1.5 rem;
 }
+    #o-skills-section{
+        margin:5% 5% 5% 2%;
+        align-items: center;
+        
+        text-align:center;
+       
+        color:black;
+       
+    }
+    .o-skills-section-heading{
+       box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
+       background-color: #60712F;
+       width: 100%;
+       margin: 10px auto auto auto;
+       
+       
+    }
+    .o-skill-information{
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 2%;
+        margin: 3px;
+        align-items: stretch;
+        justify-content: center;
+    }
+    .o-skills-card{
+        margin: 5px auto;
+        width: 200px;
+        height: 330px;
+        border-radius: 8px;
+        background-color: #CFCFEA;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.18);
+       
+    }
+    .header-card{
+        
+        height: 100px;
+        background-color: #60712F;
+        border-radius: 8px 8px 160px 160px / 8 px 8px 120px 120px;
+        display: flex;
+        justify-content: center;
+        
+        align-items: center;
+    }
+    .topic-card{
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .content-card{
+        padding: 24px;
+        text-align: center;
+    }
+
 #contact-section{
     margin-top: 50px;
     padding-top: 50px;
     padding-bottom: 50px;
-    background-color: #222222;
-    color:#EAC435;
+    background-color: #262626;
+    color:#60712F;
     text-align: center;
     font-size: 1.5rem;
     box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
@@ -183,7 +324,7 @@ div.my-infromation{
     display: flex;
     margin: auto ;
     color:white;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     list-style: none;
 }
@@ -192,11 +333,11 @@ div.my-infromation{
     margin-right: 10px;
     color: white;
     text-decoration:none;
-    opacity: 0.7;
+    opacity: 0.3;
     padding: 10px 15px;
 }
 #contact-section a:hover{
-    color: #EAC435;
+    color: #60712F;
     opacity: 1;
     text-decoration: underline;
     transition: all 0.3s;

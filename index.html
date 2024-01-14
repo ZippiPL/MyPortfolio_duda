@@ -8,40 +8,54 @@
     <link rel="script" href="cv_button_script.js">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 <body>
     <main>
         <nav>
-            <div class="navbar_container">
-                <div class="navbar_logo"><span style="color:rgba(234, 196, 53, 1)">Du</span><span style="color:rgba(208, 204, 208, 1)">Da</span></div>
-                    <ul class="navbar_links">
+            <div class="navbar_container_min_width">
+                <div class="navbar_logo_min_width"><span style="color:rgba(218,116,34,1)">Du</span><span style="color:rgba(208, 204, 208, 1)">Da</span></div>
+                <div class="dropmenu">
+                    <ul class="navbar_dropmenu_links">
                         <li><a href="#intro-section">Home</a></li>
                         <li><a href="#about-section">About</a></li>
                         <li><a href="#skills-section">Skills</a></li>
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact-section">Contact</a></li>
                     </ul>
-                
+                </div>
+            </div>
+            <div class="navbar_container">
+                <div class="navbar_logo"><span style="color:rgba(218,116,34,1)">Du</span><span style="color:rgba(208, 204, 208, 1)">Da</span></div>
+               
+                    <div class="navbar_links_container">
+                        <ul class="navbar_links">
+                            <li><a href="#intro-section">Home</a></li>
+                            <li><a href="#about-section">About</a></li>
+                            <li><a href="#skills-section">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact-section">Contact</a></li>
+                        </ul>
+                   </div>
                 <div class="navbarbutton"><button class="cvbtn"><span>Donwload CV</span></button></div>
             </div>
         </nav>
-        <section id="intro-section"></section>
+        <section id="intro-sctn"></section>
         <section id="welcome-section">
             <div class="message">
-                <p>Hello !<br> I am newbie <b>Developer</b>. I studied at Silesian University of Technology in Gliwice <b>BCs degree in Information Technology</b> and <b>MSc degree in Information Technology and Data Analysis at University of Economics </b>in Katowice</p>
+                <span style="color:rgba(218,116,34,1)"><p>Hello !<br> I am newbie <b>Developer</b>. I studied at Silesian University of Technology in Gliwice <b>BCs degree in Information Technology</b> and <b>MSc degree in Information Technology and Data Analysis at University of Economics </b>in Katowice</p></span>
             </div>
             <div class="message">
-                <img src="me.jpg" border-radius= 50% height="350" alt="my profile picture">
+                <img src="images/me.jpg" border-radius= 50% height="350" alt="my profile picture">
             </div>
         </section>
         <section id="about-section">
            <h1 class="section-heading">About me</h1>
            <div class="about-container">
-             <!--<div class="message my-image"></div>-->
-               
+            <p>Hello !<br> I am newbie <b>Developer</b>. I studied at Silesian University of Technology in Gliwice <b>BCs degree in Information Technology</b> and <b>MSc degree in Information Technology and Data Analysis at University of Economics </b>in Katowice</p>
+             <!--<div class="message my-image"></div>-->   
            </div>
         </section>
         <section id="skills-section">
@@ -52,7 +66,7 @@
                     <p class="skill-name">React</p>
                 </div>
                 <div class="skill-information">
-                    <p><img src="flutter.png" height="43px"></p>
+                    <p><img src="images/flutter.png" height="43px"></p>
                     <p class="skill-name">Flutter</p>
                 </div>
                 <div class="skill-information">
@@ -67,7 +81,6 @@
                     <p><i class="fab fa-js fa-3x"></i></p>
                     <p class="skill-name">JavaScript</p>
                 </div>
-                
                 <div class="skill-information">
                     <p><i class="fab fa-bootstrap fa-3x"></i></p>
                     <p class="skill-name">Bootstrap</p>
@@ -76,36 +89,83 @@
                     <p><i class="fab fa-python fa-3x"></i></p>
                     <p class="skill-name">Python</p>
                 </div>
-                
                 <div class="skill-information">
-                    <p><img height="43" src="database-sql.png"></p>
+                    <p><img height="43" src="images/database-sql.png"></p>
                     <p class="skill-name">SQL</p>
                 </div>
                 <div class="skill-information">
-                    <p><img src="c.png" height="43px"></p>
+                    <p><img src="images/c.png" height="43px"></p>
                     <p class="skill-name" text-align="center">C/C++/C#</p>
+                </div> 
+            </div>
+        </section>
+        <section id="o-skills-section">
+            <h1 class="o-skills-section-heading">My Other Skills</h1>
+            <div class="o-skill-information">
+
+                <div class="o-skills-card">
+                    <div class="header-card">
+                         <div class="topic-card">Languge</div>
+                    </div>
+                    <div class="content-card">
+                       <b>Polish</b> - native speaker<br>
+                       <b> English</b> - Level B1 fluency,
+                       certificate can be provided
+                    </div>
                 </div>
-                
+                <div class="o-skills-card">
+                    <div class="header-card">
+                         <div class="topic-card">Adobe XD</div>
+                    </div>
+                    <div class="content-card">
+                        Knowlege of designing layout prototypes
+                    </div>
+                </div>
+                <div class="o-skills-card">
+                    <div class="header-card">
+                         <div class="topic-card">GitHub</div>
+                    </div>
+                    <div class="content-card">
+                        Knowledge allowing clonning,pushing command and managing/merging branches
+                    </div>
+                </div>
+                <div class="o-skills-card">
+                    <div class="header-card">
+                         <div class="topic-card">Advanced MS Office</div>
+                    </div>
+                    <div class="content-card">
+                       High knowlage of Excel allowing making hard calculations also
+                       Microsoft Teams, PowerPoint.
+                    </div>
+                </div>
+                <div class="o-skills-card">
+                    <div class="header-card">
+                         <div class="topic-card">Editing</div>
+                    </div>
+                    <div class="content-card">
+                        Knowledge of editing <b>sound</b> (Audacity) , <b>videos</b>(CapCut) and <b>image</b>(Photoshop).
+                        
+                    </div>
+                </div>
             </div>
         </section>
         <section class="projects-section">
             <h1 class="section-heading">My Projects</h1>
             <div class="projects-container">
-                
             </div>
         </section>
         <footer>
             <section id="contact-section">
-                <h1 class="section-heading">Let'swork together</h1>
+                <h1 class="section-heading">Let's work together</h1>
                 <p>Find Me On:</p>
                 <p>
                     <ul>
                         <li><a href="https://github.com/ZippiPL" id=""><i class="fab fa-github"></i> Github</a></li>
-                        <li><a href="#" id=""><i class="fab fa-linkedin"></i> Linkedin</a></li>
-                        <li><a href="mailto:Denis.Duda.priv@gmail.com" id=""><i class="fas fa-envelope-square"></i></a>Email: Denis.Duda.priv@gmail.com</li>
+                        <li><a href="https://www.linkedin.com/in/denis-duda-b883a12aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" id=""><i class="fab fa-linkedin"></i> Linkedin</a></li>
+                        <li><a href="mailto:Denis.Duda.priv@gmail.com" id=""><i class="fas fa-envelope-square"></i></a><span style="color:white;opacity: 0.3;">Email: Denis.Duda.priv@gmail.com </span></li>
                     </ul>
                 </p>
-
+               
             </section>
         </footer>
     </main>
