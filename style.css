@@ -1,5 +1,5 @@
 *{
-    
+    overflow-wrap: break-word;
     margin:0;
     padding:0;
     font-family: 'Poppins',Arial, Helvetica, sans-serif;
@@ -9,7 +9,7 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    background-color: #262626;;
+    background-color: #262626;
 }
 nav{
     position:fixed;
@@ -29,7 +29,6 @@ nav .navbar_container{
     align-items: center;
 }
 nav .navbar_logo{
-
     margin: 0;
     padding:5px 0;
     width: 20%;
@@ -61,9 +60,7 @@ nav .navbar_logo{
     text-decoration: underline;
     transition: all 0.3s;
 }
-
 @media(max-width:992px){
-    
     body,html{overflow-x: hidden;}
     body{position: relative;width: 100%; -webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
     nav{position: relative;}
@@ -93,7 +90,8 @@ nav .navbar_logo{
     .navbar_logo_min_width{position: relative;
         align-items: center;
         text-align: center;
-        font-size: 3rem; }
+        font-size: 3rem;
+     }
     .navbar_links_container,.navbarbutton {display: none;}
     #intro-section{
        margin: -5px;
@@ -101,117 +99,78 @@ nav .navbar_logo{
     #welcome-section{
         margin-left: 5%;
         margin-right: 5%;
-        width: 90%;
+        width: 80%;
         flex-direction: column;
         margin-top: 3%;
     }
     #welcome-section > .message{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
     #welcome-section > div{
         width: 80%;
-        height: fit-content;
-        
-        
+        height: fit-content; 
     }
-   #programming_skills-section{
-    margin: 50px;
-    justify-content: center;
-    height: fit-content;
-    }
-    .programming_section-heading{
-        box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
-        font-size: 1.5rem;
-        text-align: center;
-        padding: 1px;
-        background-color: #60712F;
-        color: rgba(255, 255, 255, 0.7);
-        width: 90;
-        justify-content: center;
-        height: fit-content;
-
-    }
-   .programming_skills-container{
-    position: relative;
-      float: left;
-      height: 500px;
-    }
-    .programming_skill-information{
-        float: left;
-        padding-top: 2%;
-        width: 90px;
-        height: 90;
-        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
-        margin: 3px;
-    }
-    .programming_skill-name{
-        padding: 1 rem;
-        margin: 0;
-        font-size:1 rem;
-    }
-    
     #about-section{
-        
         justify-content: center;
         box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
-        display: block;
-        overflow: auto;
-        min-height: 100% !important;
+        display: block;    
     }
-    .about-container{
-        display: block;
-        height: auto;
-        padding-top: 20px;
+    .contact{display: none;}
+    .contactmin{  
+        background-color: #262626;
+        color:#60712F;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.5rem;
+       
+    }
+    .centercontentmin{
+       
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: inline-block;
+    }
+    .contactmin p{   
+        
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .contactmin  li{
+       
+        font-size: 1.3rem;  
+        text-align: center;
+        justify-content: center;
+    }
+    .contactmin ul {
+        
+        color:white;
+        margin: auto;
+        list-style: none;
+       
+    }
+    .contactmin a{    
+        
+        color: white;
+        text-decoration:none;
+        opacity: 0.3;
         
     }
-
-#contact-section{
-    margin-top: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #262626;
-    color:#60712F;
-    text-align: center;
-    font-size: 1.5rem;
-    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
-}
-#contact-section p{
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-#contact-section ul {
-    display:flex;
-    flex-wrap: wrap;
-    margin: auto ;
-    color:white;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-}
-
-#contact-section a{    
-    margin-right: 10px;
-    color: white;
-    text-decoration:none;
-    opacity: 0.3;
-    padding: 10px 15px;
-}
-#contact-section a:hover{
-    color: #60712F;
-    opacity: 1;
-    text-decoration: underline;
-    transition: all 0.3s;
-}
-
-   
-    
+    .contactmin a:hover{
+        color: #60712F;
+        opacity: 1;
+        text-decoration: underline;
+        transition: all 0.3s;
+    }
 }
 @media(min-width:993px){
     .navbar_container_min_width{display:none} 
     .navbar_logo_min_width{display:none} 
+    .contactmin{display: none;}
+   
+    
 }
-
-
 #home{
     height: 100vh;
     width: 100%;
@@ -280,13 +239,10 @@ nav .navbar_logo{
 .message img {
     border-radius: 20%;
 }
-
-
-#about-section{margin: 50px;
+#about-section{
+    margin: 50px;
     justify-content: center;
-    height: 250px;
     box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
-    
 }
 .section-heading{
     box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
@@ -294,11 +250,10 @@ nav .navbar_logo{
     text-align: center;
     background-color: #60712F;
     color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 20px;
 }
 .about-container{
-    margin:1% 5% 5% 2%;
     color: #000;
-    
 }
 section{
     background-color: #CFCFEA;;
@@ -312,7 +267,18 @@ div.my-infromation{
     text-align: left;
     box-shadow: 10px 10px 10px 10px rgba(9,10,12,0.3);
 }
-#skills-section{
+
+.programming_skills-container{
+    display:grid;
+    grid-template-columns: repeat(
+        auto-fit,minmax(min(100%,65px),1fr)
+    );
+    gap: 20px;
+    margin-left: 15px;
+}
+
+#programming_skills-section{
+    
     padding: 20px;
     margin: 50px;
     justify-content: center;
@@ -321,85 +287,87 @@ div.my-infromation{
     box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
   
 }
-.skills-container{
-    display:flex;
-    flex-wrap: wrap;
-    width: 80%;
-    justify-content: space-between;
-    margin: 10px auto auto auto;
-    
-    
-    background-color: #CFCFEA;
-}
-.skill-information{
-    text-align:center;
-    padding-top: 2%;
-    width: 118px;
-    height: 100px;
-    box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.3);
-    margin: 3px;
-}
-.skill-name{
-    padding-left:min(1.5rem);
-    padding-right:min(1.5rem);
-    padding: 1.5 rem;
-    margin: 0;
-    font-size:1.5 rem;
-}
-   
-    .o-skill-information{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding-top: 2%;
-        margin: 3px;
-        align-items: stretch;
-        justify-content: center;
-    }
-    .o-skills-card{
-        margin: 5px auto;
-        width: 200px;
-        height: 330px;
-        border-radius: 8px;
-        background-color: #CFCFEA;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.18);
-       
-    }
-    .header-card{
-        
-        height: 100px;
-        background-color: #60712F;
-        border-radius: 8px 8px 160px 160px / 8 px 8px 120px 120px;
-        display: flex;
-        justify-content: center;
-        
-        align-items: center;
-    }
-    .topic-card{
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 1rem;
-        font-weight: 700;
-    }
-    .content-card{
-        padding: 24px;
-        text-align: center;
-    }
-
-#contact-section{
-    margin-top: 50px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #262626;
-    color:#60712F;
+.programming_section-heading{  
+    box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
+    font-size: 2rem;
     text-align: center;
-    font-size: 1.5rem;
-    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
+    background-color: #60712F;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
 }
-#contact-section p{
+
+#skills-section{
+   
+    display: block;
+    padding: 20px;
+    margin: 50px;
+    justify-content: center;
+    background-color: #CFCFEA;;
+    color:black;
+    box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
+}
+.o-skill-information{
+    
+    display:grid;
+    overflow-wrap: break-word;
+    grid-template-columns: repeat(auto-fit,minmax(min(100%,175px),1fr));
+    gap:20px; 
+}
+.o-skills-card{
+    padding: 1.35rem;
+    border-radius: 4px;
+    background-color: #CFCFEA;;
+    color:black;
+    box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
+}
+.header-card{
+    
+    box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: #60712F;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+}
+.projects-section{
+    
+    margin: 50px;
+    justify-content: center;
+    background-color: #CFCFEA;;
+    color:black;
+    box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
+}
+.section-heading-projects{
+    box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
+    font-size: 2rem;
+    text-align: center;
+    background-color: #60712F;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+}
+#others_skills-section{
+    margin: 50px;
+    justify-content: center;
+    background-color: #CFCFEA;;
+    color:black;
+    box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
+}
+.other_section-heading{
+    box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
+    font-size: 2rem;
+    text-align: center;
+    background-color: #60712F;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+}
+.contact{
+    padding: 50px;
+}
+.contact p{
     margin-top: 10px;
     margin-bottom: 5px;
 }
-#contact-section ul {
+.contact ul {
     display: flex;
     margin: auto ;
     color:white;
@@ -408,18 +376,24 @@ div.my-infromation{
     list-style: none;
 }
 
-#contact-section a{    
+.contact a{    
     margin-right: 10px;
     color: white;
     text-decoration:none;
     opacity: 0.3;
     padding: 10px 15px;
 }
-#contact-section a:hover{
+.contact a:hover{
     color: #60712F;
     opacity: 1;
     text-decoration: underline;
     transition: all 0.3s;
 }
-
+#contact_section{
+    background-color: #262626;
+    color:#60712F;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);  
+}
 
