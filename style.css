@@ -19,6 +19,7 @@ nav{
     background-color: #090A0C;
     padding: 20px;
     box-shadow: 0 10px 10px -5px rgba(9,10,12,0.03);
+    z-index: 9;
 }
 nav .navbar_container{
     height: 100%;
@@ -91,10 +92,22 @@ nav .navbar_logo{
         align-items: center;
         text-align: center;
         font-size: 3rem;
+        letter-spacing: -1px;/**/
      }
     .navbar_links_container,.navbarbutton {display: none;}
     #intro-section{
        margin: -5px;
+    }
+    #intro-sctn-min{
+        box-shadow: 1px solid black;
+        width: 100%;
+        height: 50px;
+        background-image:url("images/laptop-2620118_1920.jpg");
+        background-size: cover;
+        box-shadow: 10px 10px 10px 10px rgba(9,10,12,0.03);
+    }
+    #intro-sctn{
+        display: none;
     }
     #welcome-section{
         margin-left: 5%;
@@ -111,6 +124,7 @@ nav .navbar_logo{
         height: fit-content; 
     }
     #about-section{
+        
         justify-content: center;
         box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
         display: block;    
@@ -163,22 +177,60 @@ nav .navbar_logo{
         text-decoration: underline;
         transition: all 0.3s;
     }
+    
+  
 }
 @media(min-width:993px){
     .navbar_container_min_width{display:none} 
     .navbar_logo_min_width{display:none} 
     .contactmin{display: none;}
-   
+    .nxt-btn{display: none;}
+    .pre-btn{display: none;}
     
+}
+@media(max-width:1410px){
+    
+  .pre-btn,
+  .nxt-btn {
+    border: none;
+    width: 10%;
+    height: 350px;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #CFCFEA 100%);
+    cursor: pointer;
+    z-index: 8;
+    
+  }
+  
+  .pre-btn {
+    left: 0;
+    transform: rotate(180deg);
+   
+  }
+  
+  .nxt-btn {
+   right: 0;
+    
+  }
+  
+  .pre-btn img,
+  .nxt-btn img {
+    opacity: 0.2;
+  }
+  
+  .pre-btn:hover img,
+  .nxt-btn:hover img {
+    opacity: 1;
+  }
 }
 #home{
     height: 100vh;
     width: 100%;
     background-color: #262626;;
-    background: url();
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 .cvbtn{
     width: 125px;
@@ -213,10 +265,11 @@ nav .navbar_logo{
     transition: 0.5s;
 }
 #intro-sctn{
+    padding-top: 200px;
     box-shadow: 1px solid black;
     width: 100%;
-    height: 250px;
-    background-image:url("images/mb.jpg");
+    height: 200px;
+    background-image:url("images/laptop-2620118_1920.jpg");
     background-size: cover;
     box-shadow: 10px 10px 10px 10px rgba(9,10,12,0.03);
 }
@@ -266,6 +319,9 @@ div.my-infromation{
     font-size: 1.5rem;
     text-align: left;
     box-shadow: 10px 10px 10px 10px rgba(9,10,12,0.3);
+}
+.programming_skill-name{
+    font-size: clamp(0.5rem,2vw,1rem);
 }
 
 .programming_skills-container{
@@ -330,13 +386,13 @@ div.my-infromation{
     margin-bottom: 15px;
 }
 .projects-section{
-    
     margin: 50px;
     justify-content: center;
-    background-color: #CFCFEA;;
+    
     color:black;
     box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
 }
+
 .section-heading-projects{
     box-shadow:  8px 8px 8px 8px rgba(0,0,0,0.2) ;
     font-size: 2rem;
@@ -360,6 +416,149 @@ div.my-infromation{
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 15px;
 }
+/**/
+.project {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  
+  
+  .project-container {
+   padding: 0 10vw;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    
+  }
+  
+  .project-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .project-card {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+  }
+  
+  .project-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    align-items: center;
+  }
+  
+  .project-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .status-tag-inprogress {
+    right: 0;
+    position: absolute;
+    background: #262626;
+    padding: 5px;
+    border-radius: 5px;
+    color: #DA7420;
+    text-transform: capitalize;
+  }
+  .status-tag-finish {
+    right: 0;
+    position: absolute;
+    background: #262626;
+    padding: 5px;
+    border-radius: 5px;
+    color: #60712F;
+    text-transform: capitalize;
+  }
+  
+  .card-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 90%;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    background: #fff;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  .project-card:hover .card-btn {
+    opacity: 1;
+  }
+  
+  .card-btn:hover {
+    background: #60712F;
+    color: #fff;
+  }
+  
+  .project-info {
+    width: 100%;
+    height: 100px;
+    padding-top: 10px;
+  }
+  
+  .project-name {
+    text-transform: uppercase;
+  }
+  
+  .project-short-description {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    opacity: 0.5;
+    text-transform: capitalize;
+    margin: 5px 0;
+  }
+  
+  
+  .collection-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .collection {
+    position: relative;
+  }
+  
+  .collection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .collection p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    text-transform: capitalize;
+  }
+  
+  .collection:nth-child(3) {
+    grid-column: span 2;
+    margin-bottom: 10px;
+  }
+/**/
 .contact{
     padding: 50px;
 }
@@ -396,4 +595,9 @@ div.my-infromation{
     font-size: 1.5rem;
     box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);  
 }
+
+
+
+
+
 

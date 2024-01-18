@@ -18,36 +18,36 @@
         <nav>
             <div class="navbar_container_min_width">
                 <div class="navbar_logo_min_width">
-                    <span style="color:rgba(218,116,34,1);font-weight:600">Du</span>
-                    <span style="color:rgba(208, 204, 208, 1);font-weight:600">Da</span>
+                    <span style="color:rgba(218,116,34,1);font-weight:600">Du</span><span style="color:rgba(208, 204, 208, 1);font-weight:600">Da</span>
                 </div>
                 <div class="dropmenu">
                     <ul class="navbar_dropmenu_links">
-                        <li><a href="#intro-section">Home</a></li>
+                        <li><a href="#intro-sctn">Home</a></li>
                         <li><a href="#about-section">About</a></li>
-                        <li><a href="#skills-section">Skills</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact-section">Contact</a></li>
+                        <li><a href="#programming_skills-section">Skills</a></li>
+                        <li><a href="#project-id-section">Projects</a></li>
+                        <li><a href="#contact_section">Contact</a></li>
+                        <li><a href="images/Cv_Denis_Duda_ENG.pdf">Display CV</a></li>
                     </ul>
                 </div>
             </div>
             <div class="navbar_container">
                 <div class="navbar_logo">
-                    <span style="color:rgba(218,116,34,1);font-weight:600">Du</span>
-                    <span style="color:rgba(208, 204, 208, 1);font-weight:600">Da</span>
+                    <span style="color:rgba(218,116,34,1);font-weight:600">Du</span><span style="color:rgba(208, 204, 208, 1);font-weight:600">Da</span>
                 </div>
                     <div class="navbar_links_container">
                         <ul class="navbar_links">
-                            <li><a href="#intro-section">Home</a></li>
+                            <li><a href="#intro-sctn">Home</a></li>
                             <li><a href="#about-section">About</a></li>
-                            <li><a href="#skills-section">Skills</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#contact-section">Contact</a></li>
+                            <li><a href="#programming_skills-section">Skills</a></li>
+                            <li><a href="#project-id-section">Projects</a></li>
+                            <li><a href="#contact_section">Contact</a></li>
                         </ul>
                    </div>
-                <div class="navbarbutton"><button class="cvbtn"><span>Donwload CV</span></button></div>
+                <div class="navbarbutton"><a href="images/Cv_Denis_Duda_ENG.pdf" download="images/Cv_Denis_Duda_ENG.pdf"><button class="cvbtn"><span>Donwload CV</span></button></a></div>
             </div>
         </nav>
+        <section id="intro-sctn-min"></section>
         <section id="intro-sctn"></section>
         <section id="welcome-section">
             <div class="message">
@@ -57,6 +57,7 @@
                 <img src="images/me.jpg" border-radius= 50% height="350" alt="my profile picture">
             </div>
         </section>
+       
         <section id="about-section">
            <h1 class="section-heading">About me</h1>
            <div class="about-container">
@@ -152,9 +153,57 @@
                 </div>
             </div>
         </section>
-        <section class="projects-section">
+        <section class="projects-section" id="project-id-section">
             <h1 class="section-heading-projects">My Projects</h1>
-            <div class="projects-container">
+            <div class="project-container">
+                <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+                <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+                <div class="project-card">
+                    <div class="project-image">
+                        <span class="status-tag-inprogress">In Progress..</span>
+                        <img src="images/card1.jpg" class="project-thumb" alt="">
+                        <button class="card-btn">See more...</button>
+                    </div>
+                    <div class="project-info">
+                        <h2 class="project-name">Name</h2>
+                        <p class="project-short-description">Description</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <span class="status-tag-inprogress">In Progress..</span>
+                        <img src="images/card2.jpg" class="project-thumb" alt="">
+                        <button class="card-btn">See more...</button>
+                    </div>
+                    <div class="project-info">
+                        <h2 class="project-name">Name</h2>
+                        <p class="project-short-description">Description</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <span class="status-tag-inprogress">In Progress..</span>
+                        <img src="images/card3.jpg" class="project-thumb" alt="">
+                        <button class="card-btn">See more...</button>
+                    </div>
+                    <div class="project-info">
+                        <h2 class="project-name">Name</h2>
+                        <p class="project-short-description">Description</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <span class="status-tag-finish">Finished</span>
+                        <img src="images/card4.jpg" class="project-thumb" alt="">
+                        <button class="card-btn">See more...</button>
+                    </div>
+                    <div class="project-info">
+                        <h2 class="project-name">Name</h2>
+                        <p class="project-short-description">Description</p>
+                        
+                    </div>
+                </div>
+                
             </div>
         </section>
         <footer>
@@ -184,5 +233,7 @@
             </section>
         </footer>
     </main>
+    
+ <script src="script.js"></script>
 </body>
 </html>
